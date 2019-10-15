@@ -95,7 +95,7 @@ function CatList({ix}) {
 export default function () {
     return (<div>
         <div style={{textAlign:'center',fontSize:'18px',color:'gray'}}>65C02 INSTRUCTIONS</div>
-        <div className='flex-container' style={{height:'1220px'}}>
+        <div className='flex-container' style={{height:'1225px'}}>
             <div className='flex-item cat-title'>Modes</div>
             <Modes />
             <CatList ix={0}/>
