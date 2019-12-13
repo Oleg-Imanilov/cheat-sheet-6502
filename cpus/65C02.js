@@ -77,7 +77,7 @@ const cpu65C02 = [
     {
         category: 'Stack',
         name: 'PLA',
-        flags: 'NVBDIZC',
+        flags: '<N>VBDI<Z>C',
         title: '<P>u<L>l <A>ccumulator',
 
     },
@@ -270,14 +270,14 @@ const cpu65C02 = [
     {
         category: 'Bits',
         name: 'TRB',
-        flags: 'NVBDIZC<X>',
+        flags: 'NVBDIZC',
         title: '<T>est and <R>eset <B>its',
 
     },
     {
         category: 'Bits',
         name: 'TSB',
-        flags: 'NVBDIZC<X>',
+        flags: 'NVBDIZC',
         title: '<T>est and <S>et <B>its',
 
     },
@@ -285,7 +285,7 @@ const cpu65C02 = [
     {
         category: 'Bits',
         name: 'RMB',
-        flags: 'NVBDIZC<X>',
+        flags: 'NVBDIZC',
         title: '<R>eset <M>emory <B>it',
 
     },
@@ -293,7 +293,7 @@ const cpu65C02 = [
     {
         category: 'Bits',
         name: 'SMB',
-        flags: 'NVBDIZC<X>',
+        flags: 'NVBDIZC',
         title: '<S>et <M>emory <B>it',
 
     },
