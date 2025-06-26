@@ -9,7 +9,9 @@
     "generate-png": "node scripts/generate-direct.js --format=png",
     "generate-both": "node scripts/generate-direct.js --format=both",
     "generate-html": "node scripts/generate-html.js",
-    "generate-all": "npm run generate-both && npm run generate-html"
+    "generate-hex-table": "node scripts/generate-hex-table.js",
+    "generate-65C02-hex-table": "node scripts/generate-65C02-hex-table.js",
+    "generate-all": "npm run generate-both && npm run generate-html && npm run generate-hex-table && npm run generate-65C02-hex-table"
   },
   "keywords": [
     "6502",

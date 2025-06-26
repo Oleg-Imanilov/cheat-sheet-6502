@@ -43,6 +43,7 @@
         }
         
         .card {
+            position: relative;
             border: 2px solid #ddd;
             border-radius: 8px;
             padding: 20px;
@@ -53,20 +54,54 @@
             color: white;
         }
         
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-color: #007acc;
-        }
-        
+       
         .card h2 {
             margin: 0 0 10px 0;
             font-size: 1.5em;
         }
         
         .card p {
-            margin: 0;
+            margin: 0 0 25px 0;
             opacity: 0.9;
+        }
+        
+        .download-buttons {
+            position: absolute;
+            bottom: 12px;
+            right:12px;
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 6px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 1);
+            border-radius: 4px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .download-icon {
+            width: 14px;
+            height: 14px;
+            fill: #333;
         }
         
         .card.cpu-6502 {
@@ -75,6 +110,14 @@
         
         .card.cpu-65c02 {
             background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+        }
+        
+        .card.hex-table-6502 {
+            background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%);
+        }
+        
+        .card.hex-table-65c02 {
+            background: linear-gradient(135deg, #fd9644 0%, #f8b500 100%);
         }
         
         .features {
@@ -125,15 +168,86 @@
         <p class="subtitle">Interactive reference guides for 6502 and 65C02 processors</p>
         
         <div class="cards">
-            <a href="cheat-sheet-6502.html" class="card cpu-6502">
+            <div class="card cpu-6502">
+            
                 <h2>6502 CPU</h2>
                 <p>Classic 8-bit processor used in Commodore 64, Apple II, NES, and many other systems.</p>
-            </a>
             
-            <a href="cheat-sheet-65C02.html" class="card cpu-65c02">
+                <div class="download-buttons">
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadFile('cheat-sheet-6502.html');">
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        HTML
+                    </a>
+                    <a href="cheat-sheet-6502.png" class="download-btn" onclick="event.stopPropagation();" download>
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        PNG
+                    </a>
+                    <a href="cheat-sheet-6502.pdf" class="download-btn" onclick="event.stopPropagation();" download>
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        PDF
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card cpu-65c02">
                 <h2>65C02 CPU</h2>
                 <p>Enhanced version with additional instructions, addressing modes, and bug fixes.</p>
-            </a>
+                
+                <div class="download-buttons">
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadFile('cheat-sheet-65C02.html');">
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        HTML
+                    </a>
+                    <a href="cheat-sheet-65C02.png" class="download-btn" onclick="event.stopPropagation();" download>
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        PNG
+                    </a>
+                    <a href="cheat-sheet-65C02.pdf" class="download-btn" onclick="event.stopPropagation();" download>
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card hex-table-6502">
+                <h2>📊 6502 Hex Table</h2>
+                <p>Complete hexadecimal opcode table with all addressing modes and instruction details.</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadFile('6502-hex-table.html');">
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        HTML
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card hex-table-65c02">
+                <h2>📊 65C02 Hex Table</h2>
+                <p>Enhanced hex table including all additional 65C02 instructions and addressing modes.</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadFile('65C02-hex-table.html');">
+                        <svg class="download-icon" viewBox="0 0 24 24">
+                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                        </svg>
+                        HTML
+                    </a>
+                </div>
+            </div>
         </div>
         
         <div class="features">
@@ -141,19 +255,12 @@
             <ul>
                 <li><strong>Click to highlight:</strong> Click any instruction card to highlight it</li>
                 <li><strong>Search functionality:</strong> Quickly find specific instructions</li>
+                <li><strong>Hex tables:</strong> Complete opcode reference tables for both processors</li>
                 <li><strong>Print optimized:</strong> Clean layout for printing reference sheets</li>
                 <li><strong>Responsive design:</strong> Works perfectly on desktop, tablet, and mobile</li>
                 <li><strong>Keyboard shortcuts:</strong> Enhanced productivity with hotkeys</li>
             </ul>
-            
-            <h4>⌨️ Keyboard Shortcuts</h4>
-            <div class="keyboard-shortcuts">
-                <span class="key">Ctrl+F</span> <span>Toggle search mode</span>
-                <span class="key">Ctrl+P</span> <span>Print cheat sheet</span>
-                <span class="key">ESC</span> <span>Clear all highlights</span>
-                <span class="key">1</span> <span>Go to 6502 cheat sheet</span>
-                <span class="key">2</span> <span>Go to 65C02 cheat sheet</span>
-            </div>
+
         </div>
         
         <div class="footer">
@@ -163,26 +270,38 @@
     </div>
     
     <script>
-        // Add keyboard navigation for the index page
-        document.addEventListener('keydown', function(e) {
-            if (e.key === '1') {
-                window.location.href = 'cheat-sheet-6502.html';
-            } else if (e.key === '2') {
-                window.location.href = 'cheat-sheet-65C02.html';
+        // Function to force download of HTML files
+        async function downloadFile(filename) {
+            try {
+                const response = await fetch(filename);
+                const content = await response.text();
+                const blob = new Blob([content], { type: 'text/html' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            } catch (error) {
+                console.error('Download failed:', error);
+                // Fallback to opening in new tab
+                window.open(filename, '_blank');
             }
-        });
+        }
         
         // Add visual feedback for card interactions
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
-            });
+        // const cards = document.querySelectorAll('.card');
+        // cards.forEach(card => {
+        //     card.addEventListener('mouseenter', function() {
+        //         this.style.transform = 'translateY(-5px) scale(1.02)';
+        //     });
             
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
+        //     card.addEventListener('mouseleave', function() {
+        //         this.style.transform = 'translateY(0) scale(1)';
+        //     });
+        // });
     </script>
 </body>
 </html>
