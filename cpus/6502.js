@@ -355,7 +355,7 @@ const cpu6502 = [
         name: 'PHA',
         flags: 'NVBDIZC',
         title: '<P>us<H> <A>ccumulator',
-        hex: { Im: '48' }
+        hex: { Ip: '48' }
     },
     {
         col: 4,

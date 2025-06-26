@@ -5,7 +5,7 @@ const cpu65C02 = [
         name: 'LDA',
         flags: '<N>VBDI<Z>C',
         title: '<L>oa<D> <A>ccumulator',
-        hex: { Im: 'A9', Z: 'A5', Zx: 'B5', Ab: 'AD', Ax: 'BD', Ay: 'B9', Ix: 'A1', Iy: 'B1' }
+        hex: { Im: 'A9', Z: 'A5', Zx: 'B5', Ab: 'AD', Ax: 'BD', Ay: 'B9', Ix: 'A1', Iy: 'B1', iz: 'B2' }
     },
     {
         category: 'Load & Store',
@@ -28,7 +28,7 @@ const cpu65C02 = [
         name: 'STA',
         flags: 'NVBDIZC',
         title: '<ST>ore <A>ccumulator',
-        hex: { Z: '85', Zx: '95', Ab: '8D', Ax: '9D', Ay: '99', Ix: '81', Iy: '91' }
+        hex: { Z: '85', Zx: '95', Ab: '8D', Ax: '9D', Ay: '99', Ix: '81', Iy: '91', Iz: '92' }
     },
 
     {
@@ -57,7 +57,7 @@ const cpu65C02 = [
         name: 'PHA',
         flags: 'NVBDIZC',
         title: '<P>us<H> <A>ccumulator',
-        hex: { Im: '48' }
+        hex: { Ip: '48' }
     },
 
     {
@@ -65,7 +65,7 @@ const cpu65C02 = [
         name: 'PHX',
         flags: 'NVBDIZC',
         title: '<P>us<H> <X> register',
-        hex: { Im: 'DA' }
+        hex: { Ip: 'DA' }
     },
 
     {
@@ -73,7 +73,7 @@ const cpu65C02 = [
         name: 'PHY',
         flags: 'NVBDIZC',
         title: '<P>us<H> <Y> register',
-        hex: { Im: '5A' }
+        hex: { Ip: '5A' }
     },
 
     {
@@ -81,7 +81,7 @@ const cpu65C02 = [
         name: 'PHP',
         flags: 'NVBDIZC',
         title: '<P>us<H> <P>rocessor status',
-        hex: { Im: '08' }
+        hex: { Ip: '08' }
     },
 
     {
@@ -89,21 +89,21 @@ const cpu65C02 = [
         name: 'PLA',
         flags: '<N>VBDI<Z>C',
         title: '<P>u<L>l <A>ccumulator',
-        hex: { Im: '68' }
+        hex: { Ip: '68' }
     },
     {
         category: 'Stack',
         name: 'PLP',
         flags: '<NVBDIZC>',
         title: '<P>u<L>l <P>rocessor status',
-        hex: { Im: '28' }
+        hex: { Ip: '28' }
     },
     {
         category: 'Stack',
         name: 'PLX',
         flags: '<N>VBDI<Z>C',
         title: '<P>u<L>l <X> register',
-        hex: { Im: 'FA' }
+        hex: { Ip: 'FA' }
     },
 
     {
@@ -111,7 +111,7 @@ const cpu65C02 = [
         name: 'PLY',
         flags: '<N>VBDI<Z>C',
         title: '<P>u<L>l <Y> register',
-        hex: { Im: '7A' }
+        hex: { Ip: '7A' }
     },
 
     {
@@ -119,14 +119,14 @@ const cpu65C02 = [
         name: 'TXS',
         flags: 'NVBDIZC',
         title: '<T>ransfer <X> to <S>tack',
-        hex: { Im: '9A' }
+        hex: { Ip: '9A' }
     },
     {
         category: 'Stack',
         name: 'TSX',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <S>tack to <X>',
-        hex: { Im: 'BA' }
+        hex: { Ip: 'BA' }
     },
 
     {
@@ -141,14 +141,14 @@ const cpu65C02 = [
         name: 'INX',
         flags: '<N>VBDI<Z>C',
         title: '<IN>crement <X>',
-        hex: { Im: 'E8' }
+        hex: { Ip: 'E8' }
     },
     {
         category: 'Calc',
         name: 'INY',
         flags: '<N>VBDI<Z>C',
         title: '<IN>crement <Y>',
-        hex: { Im: 'C8' }
+        hex: { Ip: 'C8' }
     },
     {
         category: 'Calc',
@@ -162,14 +162,14 @@ const cpu65C02 = [
         name: 'DEX',
         flags: '<N>VBDI<Z>C',
         title: '<DE>crement <X>',
-        hex: { Im: 'CA' }
+        hex: { Ip: 'CA' }
     },
     {
         category: 'Calc',
         name: 'DEY',
         flags: '<N>VBDI<Z>C',
         title: '<DE>crement <Y>',
-        hex: { Im: '88' }
+        hex: { Ip: '88' }
     },
     {
         category: 'Calc',
@@ -191,14 +191,14 @@ const cpu65C02 = [
         title: '<AD>D with <C>arry',
         mode: { Im: 2, Z: 3, Zx: 4, Ab: 4 },
         flags: '<NV>BDI<ZC>',
-        hex: { Im: '69', Z: '65', Zx: '75', Ab: '6D', Ax: '7D', Ay: '79', Ix: '61', Iy: '71' }
+        hex: { Im: '69', Z: '65', Zx: '75', Ab: '6D', Ax: '7D', Ay: '79', Ix: '61', Iy: '71', Iz: "72" }
     },
     {
         category: 'Calc',
         name: 'SBC',
         flags: '<NV>BDI<ZC>',
         title: '<S>u<B>tract with <C>arry',
-        hex: { Im: 'E9', Z: 'E5', Zx: 'F5', Ab: 'ED', Ax: 'FD', Ay: 'F9', Ix: 'E1', Iy: 'F1' }
+        hex: { Im: 'E9', Z: 'E5', Zx: 'F5', Ab: 'ED', Ax: 'FD', Ay: 'F9', Ix: 'E1', Iy: 'F1', Iz: 'F2' }
     },
     {
         category: 'Bits',
@@ -233,35 +233,35 @@ const cpu65C02 = [
         name: 'AND',
         flags: '<N>VBDI<Z>C',
         title: 'bitwise <AND> with accumulator',
-        hex: { Im: '29', Z: '25', Zx: '35', Ab: '2D', Ax: '3D', Ay: '39', Ix: '21', Iy: '31' }
+        hex: { Im: '29', Z: '25', Zx: '35', Ab: '2D', Ax: '3D', Ay: '39', Ix: '21', Iy: '31', IZ: '32' }
     },
     {
         category: 'Bits',
         name: 'ORA',
         flags: '<N>VBDI<Z>C',
         title: 'bitwize <OR> with <A>ccumulator',
-        hex: { Im: '09', Z: '05', Zx: '15', Ab: '0D', Ax: '1D', Ay: '19', Ix: '01', Iy: '11' }
+        hex: { Im: '09', Z: '05', Zx: '15', Ab: '0D', Ax: '1D', Ay: '19', Ix: '01', Iy: '11', Iz: '12' }
     },
     {
         category: 'Bits',
         name: 'EOR',
         flags: '<N>VBDI<Z>C',
         title: 'bitwise <E>xclusive <OR>',
-        hex: { Im: '49', Z: '45', Zx: '55', Ab: '4D', Ax: '5D', Ay: '59', Ix: '41', Iy: '51' }
+        hex: { Im: '49', Z: '45', Zx: '55', Ab: '4D', Ax: '5D', Ay: '59', Ix: '41', Iy: '51', Iz: '52' }
     },
     {
         category: 'Bits',
         name: 'BIT',
         flags: '<NV>BDI<Z>C',
         title: 'test <BIT>s',
-        hex: { Z: '24', Ab: '2C' }
+        hex: { Z: '24', Ab: '2C', Im: '89', Zx: '34', Ax: '3C' }
     },
     {
         category: 'Bits',
         name: 'CMP',
         flags: '<N>VBDI<ZC>',
         title: '<C>o<MP>are accumulator',
-        hex: { Im: 'C9', Z: 'C5', Zx: 'D5', Ab: 'CD', Ax: 'DD', Ay: 'D9', Ix: 'C1', Iy: 'D1' }
+        hex: { Im: 'C9', Z: 'C5', Zx: 'D5', Ab: 'CD', Ax: 'DD', Ay: 'D9', Ix: 'C1', Iy: 'D1', Iz: 'D2' }
     },
     {
         category: 'Bits',
@@ -297,7 +297,7 @@ const cpu65C02 = [
         name: 'RMB',
         flags: 'NVBDIZC',
         title: '<R>eset <M>emory <B>it',
-        hex: { Z: '07' } // RMB0, others: 17,27,37,47,57,67,77
+        hex: { Z: '07', Z1: '17', Z2: '27', Z3: '37', Z4: '47', Z5: '57', Z6: '67', Z7: '77' } // RMB0, others: 17,27,37,47,57,67,77
     },
 
     {
@@ -305,14 +305,14 @@ const cpu65C02 = [
         name: 'SMB',
         flags: 'NVBDIZC',
         title: '<S>et <M>emory <B>it',
-        hex: { Z: '87' } // SMB0, others: 97,A7,B7,C7,D7,E7,F7
+        hex: { Z: '87', Z1: '97', Z2: 'A7', Z3: 'B7', Z4: 'C7', Z5: 'D7', Z6: 'E7', Z7: 'F7' } // SMB0, others: 97,A7,B7,C7,D7,E7,F7
     },
     {
         category: 'Flow',
         name: 'JMP',
         flags: 'NVBDIZC',
         title: '<J>u<MP>',
-        hex: { Ab: '4C', In: '6C' }
+        hex: { Ab: '4C', In: '6C', IAx: '7C' }
     },
     {
         category: 'Flow',
@@ -326,14 +326,14 @@ const cpu65C02 = [
         name: 'RTS',
         flags: 'NVBDIZC',
         title: '<R>e<T>urn from <S>ubroutine',
-        hex: { Im: '60' }
+        hex: { Ip: '60' }
     },
     {
         category: 'Flow',
         name: 'RTI',
         flags: '<NVBDIZC>',
         title: '<R>e<T>urn from <I>nterrupt',
-        hex: { Im: '40' }
+        hex: { Ip: '40' }
     },
     {
         category: 'Flow',
@@ -403,14 +403,14 @@ const cpu65C02 = [
         name: 'BBR<0-7>',
         flags: 'NVBDIZC',
         title: '<B>ranch on <B>it <R>eset',
-        hex: { R: '0F' } // BBR0, others: 1F,2F,3F,4F,5F,6F,7F
+        hex: { R: '0F', R1: '1F', R2: '2F', R3: '3F', R4: '4F', R5: '5F', R6: '6F', R7: '7F' } // BBR0, others: 1F,2F,3F,4F,5F,6F,7F
     },
     {
         category: 'Flow',
         name: 'BBS<0-7>',
         flags: 'NVBDIZC',
         title: '<B>ranch on <B>it <S>et',
-        hex: { R: '8F' } // BBS0, others: 9F,AF,BF,CF,DF,EF,FF
+        hex: { R: '8F', R1: '9F', R2: 'AF', R3: 'BF', R4: 'CF', R5: 'DF', R6: 'EF', R7: 'FF' } // BBS0, others: 9F,AF,BF,CF,DF,EF,FF
     },
 
     {
@@ -418,35 +418,35 @@ const cpu65C02 = [
         name: 'CLC',
         flags: 'NVBDIZC',
         title: '<CL>ear <C>arry',
-        hex: { Im: '18' }
+        hex: { Ip: '18' }
     },
     {
         category: 'State',
         name: 'CLD',
         flags: 'NVBDIZC',
         title: '<CL>ear <D>ecimal',
-        hex: { Im: 'D8' }
+        hex: { Ip: 'D8' }
     },
     {
         category: 'State',
         name: 'CLI',
         flags: 'NVBDIZC',
         title: '<CL>ear <I>nterrupt',
-        hex: { Im: '58' }
+        hex: { Ip: '58' }
     },
     {
         category: 'State',
         name: 'CLV',
         flags: 'NVBDIZC',
         title: '<CL>ear o<V>erflow',
-        hex: { Im: 'B8' }
+        hex: { Ip: 'B8' }
     },
     {
         category: 'State',
         name: 'SEC',
         flags: 'NVBDIZC',
         title: '<SE>t <C>arry',
-        hex: { Im: '38' }
+        hex: { Ip: '38' }
     },
 
     {
@@ -454,21 +454,21 @@ const cpu65C02 = [
         name: 'SED',
         flags: 'NVBDIZC',
         title: '<SE>t <D>ecimal',
-        hex: { Im: 'F8' }
+        hex: { Ip: 'F8' }
     },
     {
         category: 'State',
         name: 'SEI',
         flags: 'NVBDIZC',
         title: '<SE>t <I>nterrupt',
-        hex: { Im: '78' }
+        hex: { Ip: '78' }
     },
     {
         category: 'Transfer',
         name: 'TAX',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <A> to <X>',
-        hex: { Im: 'AA' }
+        hex: { Ip: 'AA' }
     },
 
     {
@@ -476,21 +476,21 @@ const cpu65C02 = [
         name: 'TAY',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <A> to <Y>',
-        hex: { Im: 'A8' }
+        hex: { Ip: 'A8' }
     },
     {
         category: 'Transfer',
         name: 'TXA',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <X> to <A>',
-        hex: { Im: '8A' }
+        hex: { Ip: '8A' }
     },
     {
         category: 'Transfer',
         name: 'TYA',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <Y> to <A>',
-        hex: { Im: '98' }
+        hex: { Ip: '98' }
     },
 
     {
@@ -498,7 +498,7 @@ const cpu65C02 = [
         name: 'BRK',
         flags: 'NV<B>DIZC',
         title: '<BR>ea<K>',
-        hex: { Im: '00' }
+        hex: { Ip: '00' }
     },
 
     {
@@ -506,7 +506,7 @@ const cpu65C02 = [
         name: 'NOP',
         flags: 'NVBDIZC',
         title: '<N>o <OP>eration',
-        hex: { Im: 'EA' }
+        hex: { Ip: 'EA' }
     },
 
     {

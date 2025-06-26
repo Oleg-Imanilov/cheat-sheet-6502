@@ -169,10 +169,10 @@
                 <tr>
                     <th></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
             </thead>
-            <tbody><tr><th>0</th><td class="valid-instruction category-misc" data-hex="00" data-instruction="BRK" data-mode="Im" data-title="<BR>ea<K>" data-category="Misc">
+            <tbody><tr><th>0</th><td class="valid-instruction category-misc" data-hex="00" data-instruction="BRK" data-mode="Ip" data-title="<BR>ea<K>" data-category="Misc">
                     <div class="hex-code">00</div>
                     <div class="instruction">BRK</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="01" data-instruction="ORA" data-mode="Ix" data-title="bitwize <OR> with <A>ccumulator" data-category="Bits">
                     <div class="hex-code">01</div>
                     <div class="instruction">ORA</div>
@@ -199,10 +199,10 @@
                     <div class="hex-code">07</div>
                     <div class="instruction">RMB</div>
                     <div class="mode">Z</div>
-                </td><td class="valid-instruction category-stack" data-hex="08" data-instruction="PHP" data-mode="Im" data-title="<P>us<H> <P>rocessor status" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="08" data-instruction="PHP" data-mode="Ip" data-title="<P>us<H> <P>rocessor status" data-category="Stack">
                     <div class="hex-code">08</div>
                     <div class="instruction">PHP</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="09" data-instruction="ORA" data-mode="Im" data-title="bitwize <OR> with <A>ccumulator" data-category="Bits">
                     <div class="hex-code">09</div>
                     <div class="instruction">ORA</div>
@@ -238,9 +238,10 @@
                     <div class="hex-code">11</div>
                     <div class="instruction">ORA</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="12">
+                </td><td class="valid-instruction category-bits" data-hex="12" data-instruction="ORA" data-mode="Iz" data-title="bitwize <OR> with <A>ccumulator" data-category="Bits">
                     <div class="hex-code">12</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">ORA</div>
+                    <div class="mode">Iz</div>
                 </td><td class="invalid-instruction" data-hex="13">
                     <div class="hex-code">13</div>
                     <div class="instruction">-</div>
@@ -256,13 +257,14 @@
                     <div class="hex-code">16</div>
                     <div class="instruction">ASL</div>
                     <div class="mode">Zx</div>
-                </td><td class="invalid-instruction" data-hex="17">
+                </td><td class="valid-instruction category-bits" data-hex="17" data-instruction="RMB" data-mode="Z1" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">17</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="18" data-instruction="CLC" data-mode="Im" data-title="<CL>ear <C>arry" data-category="State">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z1</div>
+                </td><td class="valid-instruction category-state" data-hex="18" data-instruction="CLC" data-mode="Ip" data-title="<CL>ear <C>arry" data-category="State">
                     <div class="hex-code">18</div>
                     <div class="instruction">CLC</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="19" data-instruction="ORA" data-mode="Ay" data-title="bitwize <OR> with <A>ccumulator" data-category="Bits">
                     <div class="hex-code">19</div>
                     <div class="instruction">ORA</div>
@@ -286,9 +288,10 @@
                     <div class="hex-code">1E</div>
                     <div class="instruction">ASL</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="1F">
+                </td><td class="valid-instruction category-flow" data-hex="1F" data-instruction="BBR<0-7>" data-mode="R1" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">1F</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R1</div>
                 </td></tr><tr><th>2</th><td class="valid-instruction category-flow" data-hex="20" data-instruction="JSR" data-mode="Ab" data-title="<J>ump to <S>ub<R>outine" data-category="Flow">
                     <div class="hex-code">20</div>
                     <div class="instruction">JSR</div>
@@ -315,13 +318,14 @@
                     <div class="hex-code">26</div>
                     <div class="instruction">ROL</div>
                     <div class="mode">Z</div>
-                </td><td class="invalid-instruction" data-hex="27">
+                </td><td class="valid-instruction category-bits" data-hex="27" data-instruction="RMB" data-mode="Z2" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">27</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-stack" data-hex="28" data-instruction="PLP" data-mode="Im" data-title="<P>u<L>l <P>rocessor status" data-category="Stack">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z2</div>
+                </td><td class="valid-instruction category-stack" data-hex="28" data-instruction="PLP" data-mode="Ip" data-title="<P>u<L>l <P>rocessor status" data-category="Stack">
                     <div class="hex-code">28</div>
                     <div class="instruction">PLP</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="29" data-instruction="AND" data-mode="Im" data-title="bitwise <AND> with accumulator" data-category="Bits">
                     <div class="hex-code">29</div>
                     <div class="instruction">AND</div>
@@ -345,9 +349,10 @@
                     <div class="hex-code">2E</div>
                     <div class="instruction">ROL</div>
                     <div class="mode">Ab</div>
-                </td><td class="invalid-instruction" data-hex="2F">
+                </td><td class="valid-instruction category-flow" data-hex="2F" data-instruction="BBR<0-7>" data-mode="R2" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">2F</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R2</div>
                 </td></tr><tr><th>3</th><td class="valid-instruction category-flow" data-hex="30" data-instruction="BMI" data-mode="Lb" data-title="<B>ranch on <MI>nus" data-category="Flow">
                     <div class="hex-code">30</div>
                     <div class="instruction">BMI</div>
@@ -356,15 +361,17 @@
                     <div class="hex-code">31</div>
                     <div class="instruction">AND</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="32">
+                </td><td class="valid-instruction category-bits" data-hex="32" data-instruction="AND" data-mode="IZ" data-title="bitwise <AND> with accumulator" data-category="Bits">
                     <div class="hex-code">32</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">AND</div>
+                    <div class="mode">IZ</div>
                 </td><td class="invalid-instruction" data-hex="33">
                     <div class="hex-code">33</div>
                     <div class="instruction">-</div>
-                </td><td class="invalid-instruction" data-hex="34">
+                </td><td class="valid-instruction category-bits" data-hex="34" data-instruction="BIT" data-mode="Zx" data-title="test <BIT>s" data-category="Bits">
                     <div class="hex-code">34</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BIT</div>
+                    <div class="mode">Zx</div>
                 </td><td class="valid-instruction category-bits" data-hex="35" data-instruction="AND" data-mode="Zx" data-title="bitwise <AND> with accumulator" data-category="Bits">
                     <div class="hex-code">35</div>
                     <div class="instruction">AND</div>
@@ -373,13 +380,14 @@
                     <div class="hex-code">36</div>
                     <div class="instruction">ROL</div>
                     <div class="mode">Zx</div>
-                </td><td class="invalid-instruction" data-hex="37">
+                </td><td class="valid-instruction category-bits" data-hex="37" data-instruction="RMB" data-mode="Z3" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">37</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="38" data-instruction="SEC" data-mode="Im" data-title="<SE>t <C>arry" data-category="State">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z3</div>
+                </td><td class="valid-instruction category-state" data-hex="38" data-instruction="SEC" data-mode="Ip" data-title="<SE>t <C>arry" data-category="State">
                     <div class="hex-code">38</div>
                     <div class="instruction">SEC</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="39" data-instruction="AND" data-mode="Ay" data-title="bitwise <AND> with accumulator" data-category="Bits">
                     <div class="hex-code">39</div>
                     <div class="instruction">AND</div>
@@ -391,9 +399,10 @@
                 </td><td class="invalid-instruction" data-hex="3B">
                     <div class="hex-code">3B</div>
                     <div class="instruction">-</div>
-                </td><td class="invalid-instruction" data-hex="3C">
+                </td><td class="valid-instruction category-bits" data-hex="3C" data-instruction="BIT" data-mode="Ax" data-title="test <BIT>s" data-category="Bits">
                     <div class="hex-code">3C</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BIT</div>
+                    <div class="mode">Ax</div>
                 </td><td class="valid-instruction category-bits" data-hex="3D" data-instruction="AND" data-mode="Ax" data-title="bitwise <AND> with accumulator" data-category="Bits">
                     <div class="hex-code">3D</div>
                     <div class="instruction">AND</div>
@@ -402,13 +411,14 @@
                     <div class="hex-code">3E</div>
                     <div class="instruction">ROL</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="3F">
+                </td><td class="valid-instruction category-flow" data-hex="3F" data-instruction="BBR<0-7>" data-mode="R3" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">3F</div>
-                    <div class="instruction">-</div>
-                </td></tr><tr><th>4</th><td class="valid-instruction category-flow" data-hex="40" data-instruction="RTI" data-mode="Im" data-title="<R>e<T>urn from <I>nterrupt" data-category="Flow">
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R3</div>
+                </td></tr><tr><th>4</th><td class="valid-instruction category-flow" data-hex="40" data-instruction="RTI" data-mode="Ip" data-title="<R>e<T>urn from <I>nterrupt" data-category="Flow">
                     <div class="hex-code">40</div>
                     <div class="instruction">RTI</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="41" data-instruction="EOR" data-mode="Ix" data-title="bitwise <E>xclusive <OR>" data-category="Bits">
                     <div class="hex-code">41</div>
                     <div class="instruction">EOR</div>
@@ -430,13 +440,14 @@
                     <div class="hex-code">46</div>
                     <div class="instruction">LSR</div>
                     <div class="mode">Z</div>
-                </td><td class="invalid-instruction" data-hex="47">
+                </td><td class="valid-instruction category-bits" data-hex="47" data-instruction="RMB" data-mode="Z4" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">47</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-stack" data-hex="48" data-instruction="PHA" data-mode="Im" data-title="<P>us<H> <A>ccumulator" data-category="Stack">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z4</div>
+                </td><td class="valid-instruction category-stack" data-hex="48" data-instruction="PHA" data-mode="Ip" data-title="<P>us<H> <A>ccumulator" data-category="Stack">
                     <div class="hex-code">48</div>
                     <div class="instruction">PHA</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="49" data-instruction="EOR" data-mode="Im" data-title="bitwise <E>xclusive <OR>" data-category="Bits">
                     <div class="hex-code">49</div>
                     <div class="instruction">EOR</div>
@@ -460,9 +471,10 @@
                     <div class="hex-code">4E</div>
                     <div class="instruction">LSR</div>
                     <div class="mode">Ab</div>
-                </td><td class="invalid-instruction" data-hex="4F">
+                </td><td class="valid-instruction category-flow" data-hex="4F" data-instruction="BBR<0-7>" data-mode="R4" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">4F</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R4</div>
                 </td></tr><tr><th>5</th><td class="valid-instruction category-flow" data-hex="50" data-instruction="BVC" data-mode="Lb" data-title="<B>ranch on o<V>erflow <C>lear" data-category="Flow">
                     <div class="hex-code">50</div>
                     <div class="instruction">BVC</div>
@@ -471,9 +483,10 @@
                     <div class="hex-code">51</div>
                     <div class="instruction">EOR</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="52">
+                </td><td class="valid-instruction category-bits" data-hex="52" data-instruction="EOR" data-mode="Iz" data-title="bitwise <E>xclusive <OR>" data-category="Bits">
                     <div class="hex-code">52</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">EOR</div>
+                    <div class="mode">Iz</div>
                 </td><td class="invalid-instruction" data-hex="53">
                     <div class="hex-code">53</div>
                     <div class="instruction">-</div>
@@ -488,21 +501,22 @@
                     <div class="hex-code">56</div>
                     <div class="instruction">LSR</div>
                     <div class="mode">Zx</div>
-                </td><td class="invalid-instruction" data-hex="57">
+                </td><td class="valid-instruction category-bits" data-hex="57" data-instruction="RMB" data-mode="Z5" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">57</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="58" data-instruction="CLI" data-mode="Im" data-title="<CL>ear <I>nterrupt" data-category="State">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z5</div>
+                </td><td class="valid-instruction category-state" data-hex="58" data-instruction="CLI" data-mode="Ip" data-title="<CL>ear <I>nterrupt" data-category="State">
                     <div class="hex-code">58</div>
                     <div class="instruction">CLI</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="59" data-instruction="EOR" data-mode="Ay" data-title="bitwise <E>xclusive <OR>" data-category="Bits">
                     <div class="hex-code">59</div>
                     <div class="instruction">EOR</div>
                     <div class="mode">Ay</div>
-                </td><td class="valid-instruction category-stack" data-hex="5A" data-instruction="PHY" data-mode="Im" data-title="<P>us<H> <Y> register" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="5A" data-instruction="PHY" data-mode="Ip" data-title="<P>us<H> <Y> register" data-category="Stack">
                     <div class="hex-code">5A</div>
                     <div class="instruction">PHY</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="5B">
                     <div class="hex-code">5B</div>
                     <div class="instruction">-</div>
@@ -517,13 +531,14 @@
                     <div class="hex-code">5E</div>
                     <div class="instruction">LSR</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="5F">
+                </td><td class="valid-instruction category-flow" data-hex="5F" data-instruction="BBR<0-7>" data-mode="R5" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">5F</div>
-                    <div class="instruction">-</div>
-                </td></tr><tr><th>6</th><td class="valid-instruction category-flow" data-hex="60" data-instruction="RTS" data-mode="Im" data-title="<R>e<T>urn from <S>ubroutine" data-category="Flow">
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R5</div>
+                </td></tr><tr><th>6</th><td class="valid-instruction category-flow" data-hex="60" data-instruction="RTS" data-mode="Ip" data-title="<R>e<T>urn from <S>ubroutine" data-category="Flow">
                     <div class="hex-code">60</div>
                     <div class="instruction">RTS</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-calc" data-hex="61" data-instruction="ADC" data-mode="Ix" data-title="<AD>D with <C>arry" data-category="Calc">
                     <div class="hex-code">61</div>
                     <div class="instruction">ADC</div>
@@ -546,13 +561,14 @@
                     <div class="hex-code">66</div>
                     <div class="instruction">ROR</div>
                     <div class="mode">Z</div>
-                </td><td class="invalid-instruction" data-hex="67">
+                </td><td class="valid-instruction category-bits" data-hex="67" data-instruction="RMB" data-mode="Z6" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">67</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-stack" data-hex="68" data-instruction="PLA" data-mode="Im" data-title="<P>u<L>l <A>ccumulator" data-category="Stack">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z6</div>
+                </td><td class="valid-instruction category-stack" data-hex="68" data-instruction="PLA" data-mode="Ip" data-title="<P>u<L>l <A>ccumulator" data-category="Stack">
                     <div class="hex-code">68</div>
                     <div class="instruction">PLA</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-calc" data-hex="69" data-instruction="ADC" data-mode="Im" data-title="<AD>D with <C>arry" data-category="Calc">
                     <div class="hex-code">69</div>
                     <div class="instruction">ADC</div>
@@ -576,9 +592,10 @@
                     <div class="hex-code">6E</div>
                     <div class="instruction">ROR</div>
                     <div class="mode">Ab</div>
-                </td><td class="invalid-instruction" data-hex="6F">
+                </td><td class="valid-instruction category-flow" data-hex="6F" data-instruction="BBR<0-7>" data-mode="R6" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">6F</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R6</div>
                 </td></tr><tr><th>7</th><td class="valid-instruction category-flow" data-hex="70" data-instruction="BVS" data-mode="Lb" data-title="<B>ranch on o<V>erflow <S>et" data-category="Flow">
                     <div class="hex-code">70</div>
                     <div class="instruction">BVS</div>
@@ -587,9 +604,10 @@
                     <div class="hex-code">71</div>
                     <div class="instruction">ADC</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="72">
+                </td><td class="valid-instruction category-calc" data-hex="72" data-instruction="ADC" data-mode="Iz" data-title="<AD>D with <C>arry" data-category="Calc">
                     <div class="hex-code">72</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">ADC</div>
+                    <div class="mode">Iz</div>
                 </td><td class="invalid-instruction" data-hex="73">
                     <div class="hex-code">73</div>
                     <div class="instruction">-</div>
@@ -605,27 +623,29 @@
                     <div class="hex-code">76</div>
                     <div class="instruction">ROR</div>
                     <div class="mode">Zx</div>
-                </td><td class="invalid-instruction" data-hex="77">
+                </td><td class="valid-instruction category-bits" data-hex="77" data-instruction="RMB" data-mode="Z7" data-title="<R>eset <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">77</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="78" data-instruction="SEI" data-mode="Im" data-title="<SE>t <I>nterrupt" data-category="State">
+                    <div class="instruction">RMB</div>
+                    <div class="mode">Z7</div>
+                </td><td class="valid-instruction category-state" data-hex="78" data-instruction="SEI" data-mode="Ip" data-title="<SE>t <I>nterrupt" data-category="State">
                     <div class="hex-code">78</div>
                     <div class="instruction">SEI</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-calc" data-hex="79" data-instruction="ADC" data-mode="Ay" data-title="<AD>D with <C>arry" data-category="Calc">
                     <div class="hex-code">79</div>
                     <div class="instruction">ADC</div>
                     <div class="mode">Ay</div>
-                </td><td class="valid-instruction category-stack" data-hex="7A" data-instruction="PLY" data-mode="Im" data-title="<P>u<L>l <Y> register" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="7A" data-instruction="PLY" data-mode="Ip" data-title="<P>u<L>l <Y> register" data-category="Stack">
                     <div class="hex-code">7A</div>
                     <div class="instruction">PLY</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="7B">
                     <div class="hex-code">7B</div>
                     <div class="instruction">-</div>
-                </td><td class="invalid-instruction" data-hex="7C">
+                </td><td class="valid-instruction category-flow" data-hex="7C" data-instruction="JMP" data-mode="IAx" data-title="<J>u<MP>" data-category="Flow">
                     <div class="hex-code">7C</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">JMP</div>
+                    <div class="mode">IAx</div>
                 </td><td class="valid-instruction category-calc" data-hex="7D" data-instruction="ADC" data-mode="Ax" data-title="<AD>D with <C>arry" data-category="Calc">
                     <div class="hex-code">7D</div>
                     <div class="instruction">ADC</div>
@@ -634,9 +654,10 @@
                     <div class="hex-code">7E</div>
                     <div class="instruction">ROR</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="7F">
+                </td><td class="valid-instruction category-flow" data-hex="7F" data-instruction="BBR<0-7>" data-mode="R7" data-title="<B>ranch on <B>it <R>eset" data-category="Flow">
                     <div class="hex-code">7F</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBR<0-7></div>
+                    <div class="mode">R7</div>
                 </td></tr><tr><th>8</th><td class="valid-instruction category-flow" data-hex="80" data-instruction="BRA" data-mode="Lb" data-title="<BR>anch <A>lways" data-category="Flow">
                     <div class="hex-code">80</div>
                     <div class="instruction">BRA</div>
@@ -667,17 +688,18 @@
                     <div class="hex-code">87</div>
                     <div class="instruction">SMB</div>
                     <div class="mode">Z</div>
-                </td><td class="valid-instruction category-calc" data-hex="88" data-instruction="DEY" data-mode="Im" data-title="<DE>crement <Y>" data-category="Calc">
+                </td><td class="valid-instruction category-calc" data-hex="88" data-instruction="DEY" data-mode="Ip" data-title="<DE>crement <Y>" data-category="Calc">
                     <div class="hex-code">88</div>
                     <div class="instruction">DEY</div>
-                    <div class="mode">Im</div>
-                </td><td class="invalid-instruction" data-hex="89">
+                    <div class="mode">Ip</div>
+                </td><td class="valid-instruction category-bits" data-hex="89" data-instruction="BIT" data-mode="Im" data-title="test <BIT>s" data-category="Bits">
                     <div class="hex-code">89</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-transfer" data-hex="8A" data-instruction="TXA" data-mode="Im" data-title="<T>ransfer <X> to <A>" data-category="Transfer">
+                    <div class="instruction">BIT</div>
+                    <div class="mode">Im</div>
+                </td><td class="valid-instruction category-transfer" data-hex="8A" data-instruction="TXA" data-mode="Ip" data-title="<T>ransfer <X> to <A>" data-category="Transfer">
                     <div class="hex-code">8A</div>
                     <div class="instruction">TXA</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="8B">
                     <div class="hex-code">8B</div>
                     <div class="instruction">-</div>
@@ -705,9 +727,10 @@
                     <div class="hex-code">91</div>
                     <div class="instruction">STA</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="92">
+                </td><td class="valid-instruction category-load---store" data-hex="92" data-instruction="STA" data-mode="Iz" data-title="<ST>ore <A>ccumulator" data-category="Load & Store">
                     <div class="hex-code">92</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">STA</div>
+                    <div class="mode">Iz</div>
                 </td><td class="invalid-instruction" data-hex="93">
                     <div class="hex-code">93</div>
                     <div class="instruction">-</div>
@@ -723,21 +746,22 @@
                     <div class="hex-code">96</div>
                     <div class="instruction">STX</div>
                     <div class="mode">Zy</div>
-                </td><td class="invalid-instruction" data-hex="97">
+                </td><td class="valid-instruction category-bits" data-hex="97" data-instruction="SMB" data-mode="Z1" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">97</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-transfer" data-hex="98" data-instruction="TYA" data-mode="Im" data-title="<T>ransfer <Y> to <A>" data-category="Transfer">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z1</div>
+                </td><td class="valid-instruction category-transfer" data-hex="98" data-instruction="TYA" data-mode="Ip" data-title="<T>ransfer <Y> to <A>" data-category="Transfer">
                     <div class="hex-code">98</div>
                     <div class="instruction">TYA</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-load---store" data-hex="99" data-instruction="STA" data-mode="Ay" data-title="<ST>ore <A>ccumulator" data-category="Load & Store">
                     <div class="hex-code">99</div>
                     <div class="instruction">STA</div>
                     <div class="mode">Ay</div>
-                </td><td class="valid-instruction category-stack" data-hex="9A" data-instruction="TXS" data-mode="Im" data-title="<T>ransfer <X> to <S>tack" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="9A" data-instruction="TXS" data-mode="Ip" data-title="<T>ransfer <X> to <S>tack" data-category="Stack">
                     <div class="hex-code">9A</div>
                     <div class="instruction">TXS</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="9B">
                     <div class="hex-code">9B</div>
                     <div class="instruction">-</div>
@@ -753,9 +777,10 @@
                     <div class="hex-code">9E</div>
                     <div class="instruction">STZ</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="9F">
+                </td><td class="valid-instruction category-flow" data-hex="9F" data-instruction="BBS<0-7>" data-mode="R1" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">9F</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R1</div>
                 </td></tr><tr><th>A</th><td class="valid-instruction category-load---store" data-hex="A0" data-instruction="LDY" data-mode="Im" data-title="<L>oa<D> <Y> register" data-category="Load & Store">
                     <div class="hex-code">A0</div>
                     <div class="instruction">LDY</div>
@@ -783,21 +808,22 @@
                     <div class="hex-code">A6</div>
                     <div class="instruction">LDX</div>
                     <div class="mode">Z</div>
-                </td><td class="invalid-instruction" data-hex="A7">
+                </td><td class="valid-instruction category-bits" data-hex="A7" data-instruction="SMB" data-mode="Z2" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">A7</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-transfer" data-hex="A8" data-instruction="TAY" data-mode="Im" data-title="<T>ransfer <A> to <Y>" data-category="Transfer">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z2</div>
+                </td><td class="valid-instruction category-transfer" data-hex="A8" data-instruction="TAY" data-mode="Ip" data-title="<T>ransfer <A> to <Y>" data-category="Transfer">
                     <div class="hex-code">A8</div>
                     <div class="instruction">TAY</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-load---store" data-hex="A9" data-instruction="LDA" data-mode="Im" data-title="<L>oa<D> <A>ccumulator" data-category="Load & Store">
                     <div class="hex-code">A9</div>
                     <div class="instruction">LDA</div>
                     <div class="mode">Im</div>
-                </td><td class="valid-instruction category-transfer" data-hex="AA" data-instruction="TAX" data-mode="Im" data-title="<T>ransfer <A> to <X>" data-category="Transfer">
+                </td><td class="valid-instruction category-transfer" data-hex="AA" data-instruction="TAX" data-mode="Ip" data-title="<T>ransfer <A> to <X>" data-category="Transfer">
                     <div class="hex-code">AA</div>
                     <div class="instruction">TAX</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="AB">
                     <div class="hex-code">AB</div>
                     <div class="instruction">-</div>
@@ -813,9 +839,10 @@
                     <div class="hex-code">AE</div>
                     <div class="instruction">LDX</div>
                     <div class="mode">Ab</div>
-                </td><td class="invalid-instruction" data-hex="AF">
+                </td><td class="valid-instruction category-flow" data-hex="AF" data-instruction="BBS<0-7>" data-mode="R2" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">AF</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R2</div>
                 </td></tr><tr><th>B</th><td class="valid-instruction category-flow" data-hex="B0" data-instruction="BCS" data-mode="Lb" data-title="<B>ranch on <C>arry <S>et" data-category="Flow">
                     <div class="hex-code">B0</div>
                     <div class="instruction">BCS</div>
@@ -824,9 +851,10 @@
                     <div class="hex-code">B1</div>
                     <div class="instruction">LDA</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="B2">
+                </td><td class="valid-instruction category-load---store" data-hex="B2" data-instruction="LDA" data-mode="iz" data-title="<L>oa<D> <A>ccumulator" data-category="Load & Store">
                     <div class="hex-code">B2</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">LDA</div>
+                    <div class="mode">iz</div>
                 </td><td class="invalid-instruction" data-hex="B3">
                     <div class="hex-code">B3</div>
                     <div class="instruction">-</div>
@@ -842,21 +870,22 @@
                     <div class="hex-code">B6</div>
                     <div class="instruction">LDX</div>
                     <div class="mode">Zy</div>
-                </td><td class="invalid-instruction" data-hex="B7">
+                </td><td class="valid-instruction category-bits" data-hex="B7" data-instruction="SMB" data-mode="Z3" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">B7</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="B8" data-instruction="CLV" data-mode="Im" data-title="<CL>ear o<V>erflow" data-category="State">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z3</div>
+                </td><td class="valid-instruction category-state" data-hex="B8" data-instruction="CLV" data-mode="Ip" data-title="<CL>ear o<V>erflow" data-category="State">
                     <div class="hex-code">B8</div>
                     <div class="instruction">CLV</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-load---store" data-hex="B9" data-instruction="LDA" data-mode="Ay" data-title="<L>oa<D> <A>ccumulator" data-category="Load & Store">
                     <div class="hex-code">B9</div>
                     <div class="instruction">LDA</div>
                     <div class="mode">Ay</div>
-                </td><td class="valid-instruction category-stack" data-hex="BA" data-instruction="TSX" data-mode="Im" data-title="<T>ransfer <S>tack to <X>" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="BA" data-instruction="TSX" data-mode="Ip" data-title="<T>ransfer <S>tack to <X>" data-category="Stack">
                     <div class="hex-code">BA</div>
                     <div class="instruction">TSX</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="BB">
                     <div class="hex-code">BB</div>
                     <div class="instruction">-</div>
@@ -872,9 +901,10 @@
                     <div class="hex-code">BE</div>
                     <div class="instruction">LDX</div>
                     <div class="mode">Ay</div>
-                </td><td class="invalid-instruction" data-hex="BF">
+                </td><td class="valid-instruction category-flow" data-hex="BF" data-instruction="BBS<0-7>" data-mode="R3" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">BF</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R3</div>
                 </td></tr><tr><th>C</th><td class="valid-instruction category-bits" data-hex="C0" data-instruction="CPY" data-mode="Im" data-title="<C>om<P>are <Y> register" data-category="Bits">
                     <div class="hex-code">C0</div>
                     <div class="instruction">CPY</div>
@@ -901,21 +931,22 @@
                     <div class="hex-code">C6</div>
                     <div class="instruction">DEC</div>
                     <div class="mode">Z</div>
-                </td><td class="invalid-instruction" data-hex="C7">
+                </td><td class="valid-instruction category-bits" data-hex="C7" data-instruction="SMB" data-mode="Z4" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">C7</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-calc" data-hex="C8" data-instruction="INY" data-mode="Im" data-title="<IN>crement <Y>" data-category="Calc">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z4</div>
+                </td><td class="valid-instruction category-calc" data-hex="C8" data-instruction="INY" data-mode="Ip" data-title="<IN>crement <Y>" data-category="Calc">
                     <div class="hex-code">C8</div>
                     <div class="instruction">INY</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="C9" data-instruction="CMP" data-mode="Im" data-title="<C>o<MP>are accumulator" data-category="Bits">
                     <div class="hex-code">C9</div>
                     <div class="instruction">CMP</div>
                     <div class="mode">Im</div>
-                </td><td class="valid-instruction category-calc" data-hex="CA" data-instruction="DEX" data-mode="Im" data-title="<DE>crement <X>" data-category="Calc">
+                </td><td class="valid-instruction category-calc" data-hex="CA" data-instruction="DEX" data-mode="Ip" data-title="<DE>crement <X>" data-category="Calc">
                     <div class="hex-code">CA</div>
                     <div class="instruction">DEX</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-misc" data-hex="CB" data-instruction="WAI" data-mode="Im" data-title="<WA>it for <I>nterrupt" data-category="Misc">
                     <div class="hex-code">CB</div>
                     <div class="instruction">WAI</div>
@@ -932,9 +963,10 @@
                     <div class="hex-code">CE</div>
                     <div class="instruction">DEC</div>
                     <div class="mode">Ab</div>
-                </td><td class="invalid-instruction" data-hex="CF">
+                </td><td class="valid-instruction category-flow" data-hex="CF" data-instruction="BBS<0-7>" data-mode="R4" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">CF</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R4</div>
                 </td></tr><tr><th>D</th><td class="valid-instruction category-flow" data-hex="D0" data-instruction="BNE" data-mode="Lb" data-title="<B>ranch on <N>ot <E>qual" data-category="Flow">
                     <div class="hex-code">D0</div>
                     <div class="instruction">BNE</div>
@@ -943,9 +975,10 @@
                     <div class="hex-code">D1</div>
                     <div class="instruction">CMP</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="D2">
+                </td><td class="valid-instruction category-bits" data-hex="D2" data-instruction="CMP" data-mode="Iz" data-title="<C>o<MP>are accumulator" data-category="Bits">
                     <div class="hex-code">D2</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">CMP</div>
+                    <div class="mode">Iz</div>
                 </td><td class="invalid-instruction" data-hex="D3">
                     <div class="hex-code">D3</div>
                     <div class="instruction">-</div>
@@ -960,21 +993,22 @@
                     <div class="hex-code">D6</div>
                     <div class="instruction">DEC</div>
                     <div class="mode">Zx</div>
-                </td><td class="invalid-instruction" data-hex="D7">
+                </td><td class="valid-instruction category-bits" data-hex="D7" data-instruction="SMB" data-mode="Z5" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">D7</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="D8" data-instruction="CLD" data-mode="Im" data-title="<CL>ear <D>ecimal" data-category="State">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z5</div>
+                </td><td class="valid-instruction category-state" data-hex="D8" data-instruction="CLD" data-mode="Ip" data-title="<CL>ear <D>ecimal" data-category="State">
                     <div class="hex-code">D8</div>
                     <div class="instruction">CLD</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-bits" data-hex="D9" data-instruction="CMP" data-mode="Ay" data-title="<C>o<MP>are accumulator" data-category="Bits">
                     <div class="hex-code">D9</div>
                     <div class="instruction">CMP</div>
                     <div class="mode">Ay</div>
-                </td><td class="valid-instruction category-stack" data-hex="DA" data-instruction="PHX" data-mode="Im" data-title="<P>us<H> <X> register" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="DA" data-instruction="PHX" data-mode="Ip" data-title="<P>us<H> <X> register" data-category="Stack">
                     <div class="hex-code">DA</div>
                     <div class="instruction">PHX</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-misc" data-hex="DB" data-instruction="STP" data-mode="Im" data-title="<ST>o<P>" data-category="Misc">
                     <div class="hex-code">DB</div>
                     <div class="instruction">STP</div>
@@ -990,9 +1024,10 @@
                     <div class="hex-code">DE</div>
                     <div class="instruction">DEC</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="DF">
+                </td><td class="valid-instruction category-flow" data-hex="DF" data-instruction="BBS<0-7>" data-mode="R5" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">DF</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R5</div>
                 </td></tr><tr><th>E</th><td class="valid-instruction category-bits" data-hex="E0" data-instruction="CPX" data-mode="Im" data-title="<C>om<P>are <X> register" data-category="Bits">
                     <div class="hex-code">E0</div>
                     <div class="instruction">CPX</div>
@@ -1019,21 +1054,22 @@
                     <div class="hex-code">E6</div>
                     <div class="instruction">INC</div>
                     <div class="mode">Z</div>
-                </td><td class="invalid-instruction" data-hex="E7">
+                </td><td class="valid-instruction category-bits" data-hex="E7" data-instruction="SMB" data-mode="Z6" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">E7</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-calc" data-hex="E8" data-instruction="INX" data-mode="Im" data-title="<IN>crement <X>" data-category="Calc">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z6</div>
+                </td><td class="valid-instruction category-calc" data-hex="E8" data-instruction="INX" data-mode="Ip" data-title="<IN>crement <X>" data-category="Calc">
                     <div class="hex-code">E8</div>
                     <div class="instruction">INX</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-calc" data-hex="E9" data-instruction="SBC" data-mode="Im" data-title="<S>u<B>tract with <C>arry" data-category="Calc">
                     <div class="hex-code">E9</div>
                     <div class="instruction">SBC</div>
                     <div class="mode">Im</div>
-                </td><td class="valid-instruction category-misc" data-hex="EA" data-instruction="NOP" data-mode="Im" data-title="<N>o <OP>eration" data-category="Misc">
+                </td><td class="valid-instruction category-misc" data-hex="EA" data-instruction="NOP" data-mode="Ip" data-title="<N>o <OP>eration" data-category="Misc">
                     <div class="hex-code">EA</div>
                     <div class="instruction">NOP</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="EB">
                     <div class="hex-code">EB</div>
                     <div class="instruction">-</div>
@@ -1049,9 +1085,10 @@
                     <div class="hex-code">EE</div>
                     <div class="instruction">INC</div>
                     <div class="mode">Ab</div>
-                </td><td class="invalid-instruction" data-hex="EF">
+                </td><td class="valid-instruction category-flow" data-hex="EF" data-instruction="BBS<0-7>" data-mode="R6" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">EF</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R6</div>
                 </td></tr><tr><th>F</th><td class="valid-instruction category-flow" data-hex="F0" data-instruction="BEQ" data-mode="Lb" data-title="<B>ranch on <EQ>ual" data-category="Flow">
                     <div class="hex-code">F0</div>
                     <div class="instruction">BEQ</div>
@@ -1060,9 +1097,10 @@
                     <div class="hex-code">F1</div>
                     <div class="instruction">SBC</div>
                     <div class="mode">Iy</div>
-                </td><td class="invalid-instruction" data-hex="F2">
+                </td><td class="valid-instruction category-calc" data-hex="F2" data-instruction="SBC" data-mode="Iz" data-title="<S>u<B>tract with <C>arry" data-category="Calc">
                     <div class="hex-code">F2</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">SBC</div>
+                    <div class="mode">Iz</div>
                 </td><td class="invalid-instruction" data-hex="F3">
                     <div class="hex-code">F3</div>
                     <div class="instruction">-</div>
@@ -1077,21 +1115,22 @@
                     <div class="hex-code">F6</div>
                     <div class="instruction">INC</div>
                     <div class="mode">Zx</div>
-                </td><td class="invalid-instruction" data-hex="F7">
+                </td><td class="valid-instruction category-bits" data-hex="F7" data-instruction="SMB" data-mode="Z7" data-title="<S>et <M>emory <B>it" data-category="Bits">
                     <div class="hex-code">F7</div>
-                    <div class="instruction">-</div>
-                </td><td class="valid-instruction category-state" data-hex="F8" data-instruction="SED" data-mode="Im" data-title="<SE>t <D>ecimal" data-category="State">
+                    <div class="instruction">SMB</div>
+                    <div class="mode">Z7</div>
+                </td><td class="valid-instruction category-state" data-hex="F8" data-instruction="SED" data-mode="Ip" data-title="<SE>t <D>ecimal" data-category="State">
                     <div class="hex-code">F8</div>
                     <div class="instruction">SED</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="valid-instruction category-calc" data-hex="F9" data-instruction="SBC" data-mode="Ay" data-title="<S>u<B>tract with <C>arry" data-category="Calc">
                     <div class="hex-code">F9</div>
                     <div class="instruction">SBC</div>
                     <div class="mode">Ay</div>
-                </td><td class="valid-instruction category-stack" data-hex="FA" data-instruction="PLX" data-mode="Im" data-title="<P>u<L>l <X> register" data-category="Stack">
+                </td><td class="valid-instruction category-stack" data-hex="FA" data-instruction="PLX" data-mode="Ip" data-title="<P>u<L>l <X> register" data-category="Stack">
                     <div class="hex-code">FA</div>
                     <div class="instruction">PLX</div>
-                    <div class="mode">Im</div>
+                    <div class="mode">Ip</div>
                 </td><td class="invalid-instruction" data-hex="FB">
                     <div class="hex-code">FB</div>
                     <div class="instruction">-</div>
@@ -1106,9 +1145,10 @@
                     <div class="hex-code">FE</div>
                     <div class="instruction">INC</div>
                     <div class="mode">Ax</div>
-                </td><td class="invalid-instruction" data-hex="FF">
+                </td><td class="valid-instruction category-flow" data-hex="FF" data-instruction="BBS<0-7>" data-mode="R7" data-title="<B>ranch on <B>it <S>et" data-category="Flow">
                     <div class="hex-code">FF</div>
-                    <div class="instruction">-</div>
+                    <div class="instruction">BBS<0-7></div>
+                    <div class="mode">R7</div>
                 </td></tr></tbody>
         </table>
         
@@ -1125,7 +1165,7 @@
         </div>
         
         <div class="stats">
-            <strong>Statistics:</strong> 172 valid instructions out of 256 possible opcodes (67% coverage)
+            <strong>Statistics:</strong> 212 valid instructions out of 256 possible opcodes (83% coverage)
         </div>
         
         <div class="tooltip" id="tooltip"></div>
