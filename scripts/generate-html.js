@@ -126,6 +126,7 @@ class HTMLStaticGenerator {
             transition: all 0.3s ease;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            cursor: pointer;            
         }
         
        
@@ -242,7 +243,7 @@ class HTMLStaticGenerator {
         <p class="subtitle">Interactive reference guides for 6502 and 65C02 processors</p>
         
         <div class="cards">
-            <div class="card cpu-6502">
+            <div class="card cpu-6502" onclick="navigateTo('cheat-sheet-6502.html');">
             
                 <h2>6502 CPU</h2>
                 <p>Classic 8-bit processor used in Commodore 64, Apple II, NES, and many other systems.</p>
@@ -269,7 +270,7 @@ class HTMLStaticGenerator {
                 </div>
             </div>
             
-            <div class="card cpu-65c02">
+            <div class="card cpu-65c02" onclick="navigateTo('cheat-sheet-65C02.html');">
                 <h2>65C02 CPU</h2>
                 <p>Enhanced version with additional instructions, addressing modes, and bug fixes.</p>
                 
@@ -297,7 +298,7 @@ class HTMLStaticGenerator {
         </div>
 
         <div class="cards">
-            <div class="card hex-table-6502">
+            <div class="card hex-table-6502" onclick="navigateTo('6502-hex-table.html');">
                 <h2>📊 6502 Hex Table</h2>
                 <p>Complete hexadecimal opcode table with all addressing modes and instruction details.</p>
                 <div class="download-buttons">
@@ -310,7 +311,7 @@ class HTMLStaticGenerator {
                 </div>
             </div>
             
-            <div class="card hex-table-65c02">
+            <div class="card hex-table-65c02"  onclick="navigateTo('65C02-hex-table.html');">
                 <h2>📊 65C02 Hex Table</h2>
                 <p>Enhanced hex table including all additional 65C02 instructions and addressing modes.</p>
                 <div class="download-buttons">
@@ -365,17 +366,11 @@ class HTMLStaticGenerator {
             }
         }
         
-        // Add visual feedback for card interactions
-        // const cards = document.querySelectorAll('.card');
-        // cards.forEach(card => {
-        //     card.addEventListener('mouseenter', function() {
-        //         this.style.transform = 'translateY(-5px) scale(1.02)';
-        //     });
-            
-        //     card.addEventListener('mouseleave', function() {
-        //         this.style.transform = 'translateY(0) scale(1)';
-        //     });
-        // });
+        // Function to navigate to cheat sheet
+        function navigateTo(filename) {
+            window.location.href = filename;
+        }
+        
     </script>
 </body>
 </html>`;
