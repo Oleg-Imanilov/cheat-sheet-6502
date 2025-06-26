@@ -564,7 +564,7 @@ export const timing = {
     JSR: { Ab: 6, },
     LDA: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+', Ay: '4+', Ix: 6, Iy: 5, Iz: 5, },
     LDX: { Im: 2, Z: 3, Zy: 4, Ab: 4, Ay: '4+', },
-    LDY: { Im: 2, Z: 3, Zy: 4, Ab: 4, Ay: '4+', },
+    LDY: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ay: '4+', },
     LSR: { Ac: 2, Z: 5, Zx: 6, Ab: 6, Ax: '7+', },
     NOP: { Ip: 2, },
     ORA: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+', Ay: '4+', Ix: 6, Iy: 5, Iz: 5, },
