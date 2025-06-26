@@ -280,7 +280,7 @@ const cpu65C02 = [
     {
         category: 'Bits',
         name: 'TRB',
-        flags: 'NVBDIZC',
+        flags: 'NVBDI<Z>C',
         title: '<T>est and <R>eset <B>its',
         hex: { Z: '14', Ab: '1C' }
     },
