@@ -89,7 +89,7 @@ const cpu6502 = [
         name: 'BRK',
         flags: 'NV<B>DIZC',
         title: '<BR>ea<K>',
-        hex: { Im: '00' }
+        hex: { Ip: '00' }
     },
     {
         col: 1,
@@ -131,49 +131,49 @@ const cpu6502 = [
         name: 'CLC',
         flags: 'NVBDIZC',
         title: '<CL>ear <C>arry',
-        hex: { Im: '18' }
+        hex: { Ip: '18' }
     },
     {
         col: 1,
         name: 'SEC',
         flags: 'NVBDIZC',
         title: '<SE>t <C>arry',
-        hex: { Im: '38' }
+        hex: { Ip: '38' }
     },
     {
         col: 2,
         name: 'CLI',
         flags: 'NVBDIZC',
         title: '<CL>ear <I>nterrupt',
-        hex: { Im: '58' }
+        hex: { Ip: '58' }
     },
     {
         col: 2,
         name: 'SEI',
         flags: 'NVBDIZC',
         title: '<SE>t <I>nterrupt',
-        hex: { Im: '78' }
+        hex: { Ip: '78' }
     },
     {
         col: 2,
         name: 'CLV',
         flags: 'NVBDIZC',
         title: '<CL>ear o<V>erflow',
-        hex: { Im: 'B8' }
+        hex: { Ip: 'B8' }
     },
     {
         col: 2,
         name: 'CLD',
         flags: 'NVBDIZC',
         title: '<CL>ear <D>ecimal',
-        hex: { Im: 'D8' }
+        hex: { Ip: 'D8' }
     },
     {
         col: 2,
         name: 'SED',
         flags: 'NVBDIZC',
         title: '<SE>t <D>ecimal',
-        hex: { Im: 'F8' }
+        hex: { Ip: 'F8' }
     },
     {
         col: 4,
@@ -229,7 +229,7 @@ const cpu6502 = [
         name: 'NOP',
         flags: 'NVBDIZC',
         title: '<N>o <OP>eration',
-        hex: { Im: 'EA' }
+        hex: { Ip: 'EA' }
     },
     {
         col: 3,
@@ -243,56 +243,56 @@ const cpu6502 = [
         name: 'TAX',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <A> to <X>',
-        hex: { Im: 'AA' }
+        hex: { Ip: 'AA' }
     },
     {
         col: 3,
         name: 'TXA',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <X> to <A>',
-        hex: { Im: '8A' }
+        hex: { Ip: '8A' }
     },
     {
         col: 3,
         name: 'DEX',
         flags: '<N>VBDI<Z>C',
         title: '<DE>crement <X>',
-        hex: { Im: 'CA' }
+        hex: { Ip: 'CA' }
     },
     {
         col: 3,
         name: 'INX',
         flags: '<N>VBDI<Z>C',
         title: '<IN>crement <X>',
-        hex: { Im: 'E8' }
+        hex: { Ip: 'E8' }
     },
     {
         col: 4,
         name: 'TAY',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <A> to <Y>',
-        hex: { Im: 'A8' }
+        hex: { Ip: 'A8' }
     },
     {
         col: 4,
         name: 'TYA',
         flags: '<N>VBDI<Z>C',
         title: '<T>ransfer <Y> to <A>',
-        hex: { Im: '98' }
+        hex: { Ip: '98' }
     },
     {
         col: 4,
         name: 'DEY',
         flags: '<N>VBDI<Z>C',
         title: '<DE>crement <Y>',
-        hex: { Im: '88' }
+        hex: { Ip: '88' }
     },
     {
         col: 4,
         name: 'INY',
         flags: '<N>VBDI<Z>C',
         title: '<IN>crement <Y>',
-        hex: { Im: 'C8' }
+        hex: { Ip: 'C8' }
     },
     {
         col: 3,
@@ -313,14 +313,14 @@ const cpu6502 = [
         name: 'RTI',
         flags: '<NVBDIZC>',
         title: '<R>e<T>urn from <I>nterrupt',
-        hex: { Im: '40' }
+        hex: { Ip: '40' }
     },
     {
         col: 3,
         name: 'RTS',
         flags: 'NVBDIZC',
         title: '<R>e<T>urn from <S>ubroutine',
-        hex: { Im: '60' }
+        hex: { Ip: '60' }
     },
     {
         col: 3,
@@ -341,14 +341,14 @@ const cpu6502 = [
         name: 'TXS',
         flags: 'NVBDIZC',
         title: '<T>ransfer <X> to <S>tack',
-        hex: { Im: '9A' }
+        hex: { Ip: '9A' }
     },
     {
         col: 4,
         name: 'TSX',
         flags: 'NVBDIZC',
         title: '<T>ransfer <S>tack to <X>',
-        hex: { Im: 'BA' }
+        hex: { Ip: 'BA' }
     },
     {
         col: 4,
@@ -362,21 +362,21 @@ const cpu6502 = [
         name: 'PLA',
         flags: 'NVBDIZC',
         title: '<P>u<L>l <A>ccumulator',
-        hex: { Im: '68' }
+        hex: { Ip: '68' }
     },
     {
         col: 4,
         name: 'PHP',
         flags: 'NVBDIZC',
         title: '<P>us<H> <P>rocessor status',
-        hex: { Im: '08' }
+        hex: { Ip: '08' }
     },
     {
         col: 4,
         name: 'PLP',
         flags: 'NVBDIZC',
         title: '<P>u<L>l <P>rocessor status',
-        hex: { Im: '28' }
+        hex: { Ip: '28' }
     },
     {
         col: 4,
@@ -413,19 +413,19 @@ export const timing = {
     BCS: { Lb: '2+' },
     BNE: { Lb: '2+' },
     BEQ: { Lb: '2+' },
-    BRK: { Im: 7 },
+    BRK: { Ip: 7 },
     CMP: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+', Ay: '4+', Ix: 6, Iy: '5+' },
     CPX: { Im: 2, Z: 3, Ab: 4 },
     CPY: { Im: 2, Z: 3, Ab: 4 },
     DEC: { Z: 5, Zx: 6, Ab: 6, Ax: 7 },
     EOR: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+', Ay: '4+', Ix: 6, Iy: '5+' },
-    CLC: { Im: 2 },
-    SEC: { Im: 2 },
-    CLI: { Im: 2 },
-    SEI: { Im: 2 },
-    CLV: { Im: 2 },
-    CLD: { Im: 2 },
-    SED: { Im: 2 },
+    CLC: { Ip: 2 },
+    SEC: { Ip: 2 },
+    CLI: { Ip: 2 },
+    SEI: { Ip: 2 },
+    CLV: { Ip: 2 },
+    CLD: { Ip: 2 },
+    SED: { Ip: 2 },
     INC: { Z: 5, Zx: 6, Ab: 6, Ax: 7 },
     JMP: { Ab: 3, In: 5 },
     JSR: { Ab: 6 },
@@ -433,28 +433,28 @@ export const timing = {
     LDX: { Im: 2, Z: 3, Zy: 4, Ab: 4, Ay: '4+' },
     LDY: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+' },
     LSR: { A: 2, Z: 5, Zx: 6, Ab: 6, Ax: 7 },
-    NOP: { Im: 2 },
+    NOP: { Ip: 2 },
     ORA: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+', Ay: '4+', Ix: 6, Iy: '5+' },
-    TAX: { Im: 2 },
-    TXA: { Im: 2 },
-    DEX: { Im: 2 },
-    INX: { Im: 2 },
-    TAY: { Im: 2 },
-    TYA: { Im: 2 },
-    DEY: { Im: 2 },
-    INY: { Im: 2 },
+    TAX: { Ip: 2 },
+    TXA: { Ip: 2 },
+    DEX: { Ip: 2 },
+    INX: { Ip: 2 },
+    TAY: { Ip: 2 },
+    TYA: { Ip: 2 },
+    DEY: { Ip: 2 },
+    INY: { Ip: 2 },
     ROL: { A: 2, Z: 5, Zx: 6, Ab: 6, Ax: 7 },
     ROR: { A: 2, Z: 5, Zx: 6, Ab: 6, Ax: 7 },
-    RTI: { Im: 6 },
-    RTS: { Im: 6 },
+    RTI: { Ip: 6 },
+    RTS: { Ip: 6 },
     SBC: { Im: 2, Z: 3, Zx: 4, Ab: 4, Ax: '4+', Ay: '4+', Ix: 6, Iy: '5+' },
     STA: { Z: 3, Zx: 4, Ab: 4, Ax: 5, Ay: 5, Ix: 6, Iy: 6 },
-    TXS: { Im: 2 },
-    TSX: { Im: 2 },
-    PHA: { Im: 3 },
-    PLA: { Im: 4 },
-    PHP: { Im: 3 },
-    PLP: { Im: 4 },
+    TXS: { Ip: 2 },
+    TSX: { Ip: 2 },
+    PHA: { Ip: 3 },
+    PLA: { Ip: 4 },
+    PHP: { Ip: 3 },
+    PLP: { Ip: 4 },
     STX: { Z: 3, Zy: 4, Ab: 4 },
     STY: { Z: 3, Zx: 4, Ab: 4 }
 };

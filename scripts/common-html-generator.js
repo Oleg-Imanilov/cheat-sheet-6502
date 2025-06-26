@@ -45,6 +45,7 @@ class CommonHTMLGenerator {
                 &nbsp;Modes
                 <table style="margin: 4px;">
                     <tbody>
+                        <tr><td>Ip</td><td><span class="mode-label">Implied</span></td><td></td></tr>                    
                         <tr><td>Ac</td><td><span class="mode-label">Accumulator</span></td><td></td></tr>
                         <tr><td>Lb</td><td><span class="mode-label">Label</span></td><td>LABEL</td></tr>
                         <tr><td>Im</td><td><span class="mode-label">Immediate</span></td><td>#$12</td></tr>
