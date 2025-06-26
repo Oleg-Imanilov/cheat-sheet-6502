@@ -1,6 +1,6 @@
 # [6502/65C02 CPU Cheat Sheet Generator](https://oleg-imanilov.github.io/cheat-sheet-6502/)
 
-## [See and download online](https://oleg-imanilov.github.io/cheat-sheet-6502/)
+##                  [Browse and download](https://oleg-imanilov.github.io/cheat-sheet-6502/)
 
 A simple, direct generator for creating 6502 and 65C02 CPU instruction cheat sheets in PNG and PDF formats.
 
