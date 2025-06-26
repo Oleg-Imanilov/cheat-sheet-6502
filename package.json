@@ -1,19 +1,25 @@
 {
-  "name": "chit-sheet",
+  "name": "cheat-sheet-6502-generator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "6502/65C02 CPU instruction cheat sheet generator",
+  "main": "scripts/generate-direct.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "generate": "node scripts/generate-direct.js",
+    "generate-pdf": "node scripts/generate-direct.js --format=pdf",
+    "generate-png": "node scripts/generate-direct.js --format=png",
+    "generate-both": "node scripts/generate-direct.js --format=both"
   },
-  "keywords": [],
+  "keywords": [
+    "6502",
+    "65C02",
+    "cpu",
+    "assembly",
+    "cheat-sheet",
+    "reference"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.1.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "puppeteer": "^21.11.0"
   }
 }
