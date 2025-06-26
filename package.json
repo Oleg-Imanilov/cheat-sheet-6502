@@ -7,7 +7,9 @@
     "generate": "node scripts/generate-direct.js",
     "generate-pdf": "node scripts/generate-direct.js --format=pdf",
     "generate-png": "node scripts/generate-direct.js --format=png",
-    "generate-both": "node scripts/generate-direct.js --format=both"
+    "generate-both": "node scripts/generate-direct.js --format=both",
+    "generate-html": "node scripts/generate-html.js",
+    "generate-all": "npm run generate-both && npm run generate-html"
   },
   "keywords": [
     "6502",

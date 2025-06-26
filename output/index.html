@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6502/65C02 CPU Cheat Sheets</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #007acc;
+        }
+        
+        .card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+        
+        .card p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .card.cpu-6502 {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .card.cpu-65c02 {
+            background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+        }
+        
+        .features {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .features h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .features ul {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .keyboard-shortcuts {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .key {
+            background: #333;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖥️ CPU Cheat Sheets</h1>
+        <p class="subtitle">Interactive reference guides for 6502 and 65C02 processors</p>
+        
+        <div class="cards">
+            <a href="cheat-sheet-6502.html" class="card cpu-6502">
+                <h2>6502 CPU</h2>
+                <p>Classic 8-bit processor used in Commodore 64, Apple II, NES, and many other systems.</p>
+            </a>
+            
+            <a href="cheat-sheet-65C02.html" class="card cpu-65c02">
+                <h2>65C02 CPU</h2>
+                <p>Enhanced version with additional instructions, addressing modes, and bug fixes.</p>
+            </a>
+        </div>
+        
+        <div class="features">
+            <h3>✨ Interactive Features</h3>
+            <ul>
+                <li><strong>Click to highlight:</strong> Click any instruction card to highlight it</li>
+                <li><strong>Search functionality:</strong> Quickly find specific instructions</li>
+                <li><strong>Print optimized:</strong> Clean layout for printing reference sheets</li>
+                <li><strong>Responsive design:</strong> Works perfectly on desktop, tablet, and mobile</li>
+                <li><strong>Keyboard shortcuts:</strong> Enhanced productivity with hotkeys</li>
+            </ul>
+            
+            <h4>⌨️ Keyboard Shortcuts</h4>
+            <div class="keyboard-shortcuts">
+                <span class="key">Ctrl+F</span> <span>Toggle search mode</span>
+                <span class="key">Ctrl+P</span> <span>Print cheat sheet</span>
+                <span class="key">ESC</span> <span>Clear all highlights</span>
+                <span class="key">1</span> <span>Go to 6502 cheat sheet</span>
+                <span class="key">2</span> <span>Go to 65C02 cheat sheet</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Generated with the 6502/65C02 Cheat Sheet Generator</p>
+            <p>Each instruction shows addressing modes, flag effects, and timing information</p>
+        </div>
+    </div>
+    
+    <script>
+        // Add keyboard navigation for the index page
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') {
+                window.location.href = 'cheat-sheet-6502.html';
+            } else if (e.key === '2') {
+                window.location.href = 'cheat-sheet-65C02.html';
+            }
+        });
+        
+        // Add visual feedback for card interactions
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

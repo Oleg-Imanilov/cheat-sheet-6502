@@ -14,13 +14,31 @@ npm install
 npm run generate        # Generate both PNG and PDF for both CPUs
 npm run generate-png    # Generate PNG files only
 npm run generate-pdf    # Generate PDF files only
+npm run generate-html   # Generate interactive HTML files only
+npm run generate-all    # Generate PNG, PDF, and HTML files
 ```
 
 ## Output
 
 Generated files will be saved in the `output/` directory:
-- `cheat-sheet-6502.png` / `cheat-sheet-6502.pdf`
-- `cheat-sheet-65C02.png` / `cheat-sheet-65C02.pdf`
+- `cheat-sheet-6502.png` / `cheat-sheet-6502.pdf` / `cheat-sheet-6502.html`
+- `cheat-sheet-65C02.png` / `cheat-sheet-65C02.pdf` / `cheat-sheet-65C02.html`
+- `index.html` - Landing page with links to both HTML cheat sheets
+
+### HTML Features
+
+The HTML versions include interactive features:
+- **Click to highlight**: Click any instruction card to highlight it
+- **Search functionality**: Press `Ctrl+F` to search for specific instructions
+- **Print optimized**: Press `Ctrl+P` for clean printing
+- **Responsive design**: Works on desktop, tablet, and mobile devices
+- **Keyboard shortcuts**: 
+  - `Ctrl+F`: Toggle search
+  - `Ctrl+P`: Print
+  - `ESC`: Clear highlights
+  - `1` / `2`: Navigate between CPUs (on index page)
+
+**To use**: Open `output/index.html` in your web browser for a landing page with links to both cheat sheets, or directly open the individual HTML files.
 
 ## Structure
 
@@ -29,7 +47,8 @@ Generated files will be saved in the `output/` directory:
 │   ├── 6502.js             # 6502 CPU instructions
 │   └── 65C02.js            # 65C02 CPU instructions
 ├── scripts/
-│   └── generate-direct.js  # Main generation script
+│   ├── generate-direct.js  # PNG/PDF generation script
+│   └── generate-html.js    # HTML static generation script
 ├── static/
 │   └── C64_Pro-STYLE.ttf   # Font file
 ├── output/                 # Generated cheat sheets
