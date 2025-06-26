@@ -309,9 +309,9 @@ function generateHexTable() {
 function main() {
     try {
         const html = generateHexTable();
-        const outputDir = path.join(process.cwd(), 'output');
+        const outputDir = path.join(process.cwd(), 'docs');
         
-        // Create output directory if it doesn't exist
+        // Create docs directory if it doesn't exist
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
         }

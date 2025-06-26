@@ -10,17 +10,17 @@ const cpu65C02 = require('../cpus/65C02.js');
 class DirectHTMLGenerator {
     constructor() {
         this.browser = null;
-        this.outputDir = './output';
+        this.outputDir = './docs';
         this.commonGenerator = new CommonHTMLGenerator();
     }
 
     async init() {
         console.log('🚀 Starting direct HTML generator...');
         
-        // Ensure output directory exists
+        // Ensure docs directory exists
         if (!fs.existsSync(this.outputDir)) {
             fs.mkdirSync(this.outputDir, { recursive: true });
-            console.log(`📁 Created output directory: ${this.outputDir}`);
+            console.log(`📁 Created docs directory: ${this.outputDir}`);
         }
 
         console.log('🌐 Launching browser...');

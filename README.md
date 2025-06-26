@@ -23,7 +23,7 @@ npm run generate-all       # Generate all files (PNG, PDF, HTML, and hex tables)
 
 ## Output
 
-Generated files will be saved in the `output/` directory:
+Generated files will be saved in the `docs/` directory:
 - `cheat-sheet-6502.png` / `cheat-sheet-6502.pdf` / `cheat-sheet-6502.html`
 - `cheat-sheet-65C02.png` / `cheat-sheet-65C02.pdf` / `cheat-sheet-65C02.html`
 - `6502-hex-table.html` - 6502 hexadecimal instruction reference table
@@ -43,7 +43,7 @@ The HTML versions include interactive features:
   - `ESC`: Clear highlights
   - `1` / `2`: Navigate between CPUs (on index page)
 
-**To use**: Open `output/index.html` in your web browser for a landing page with links to both cheat sheets, or directly open the individual HTML files.
+**To use**: Open `docs/index.html` in your web browser for a landing page with links to both cheat sheets, or directly open the individual HTML files.
 
 ## Structure
 
@@ -59,9 +59,9 @@ The HTML versions include interactive features:
 │   └── common-html-generator.js   # Shared HTML generation utilities
 ├── static/
 │   └── C64_Pro-STYLE.ttf   # Font file
-├── output/                 # Generated cheat sheets
+├── docs/                   # Generated cheat sheets
 └── package.json
 ```
 
-![Cheat sheet 65C02](output/cheat-sheet-65C02.png)
-![Cheat sheet 6502](output/cheat-sheet-6502.png)
+![Cheat sheet 65C02](docs/cheat-sheet-65C02.png)
+![Cheat sheet 6502](docs/cheat-sheet-6502.png)

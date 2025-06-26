@@ -8,17 +8,17 @@ const cpu65C02 = require('../cpus/65C02.js');
 
 class HTMLStaticGenerator {
     constructor() {
-        this.outputDir = './output';
+        this.outputDir = './docs';
         this.commonGenerator = new CommonHTMLGenerator();
     }
 
     init() {
         console.log('🚀 Starting HTML static generator...');
         
-        // Ensure output directory exists
+        // Ensure docs directory exists
         if (!fs.existsSync(this.outputDir)) {
             fs.mkdirSync(this.outputDir, { recursive: true });
-            console.log(`📁 Created output directory: ${this.outputDir}`);
+            console.log(`📁 Created docs directory: ${this.outputDir}`);
         }
     }
 

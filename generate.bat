@@ -14,6 +14,6 @@ echo Generating cheat sheets (HTML, PDF and PNG)...
 npm run generate-all
 
 echo.
-echo Done! Check the 'output' folder for your files:
+echo Done! Check the 'docs' folder for your files:
 echo.
 pause
