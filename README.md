@@ -11,11 +11,14 @@ npm install
 
 2. Generate cheat sheets:
 ```bash
-npm run generate        # Generate both PNG and PDF for both CPUs
-npm run generate-png    # Generate PNG files only
-npm run generate-pdf    # Generate PDF files only
-npm run generate-html   # Generate interactive HTML files only
-npm run generate-all    # Generate PNG, PDF, and HTML files
+npm run generate           # Generate both PNG and PDF for both CPUs
+npm run generate-png       # Generate PNG files only
+npm run generate-pdf       # Generate PDF files only
+npm run generate-both      # Generate both PNG and PDF for both CPUs
+npm run generate-html      # Generate interactive HTML files only
+npm run generate-hex-table # Generate 6502 hexadecimal instruction table
+npm run generate-65C02-hex-table # Generate 65C02 hexadecimal instruction table
+npm run generate-all       # Generate all files (PNG, PDF, HTML, and hex tables)
 ```
 
 ## Output
@@ -23,6 +26,8 @@ npm run generate-all    # Generate PNG, PDF, and HTML files
 Generated files will be saved in the `output/` directory:
 - `cheat-sheet-6502.png` / `cheat-sheet-6502.pdf` / `cheat-sheet-6502.html`
 - `cheat-sheet-65C02.png` / `cheat-sheet-65C02.pdf` / `cheat-sheet-65C02.html`
+- `6502-hex-table.html` - 6502 hexadecimal instruction reference table
+- `65C02-hex-table.html` - 65C02 hexadecimal instruction reference table
 - `index.html` - Landing page with links to both HTML cheat sheets
 
 ### HTML Features
@@ -47,8 +52,11 @@ The HTML versions include interactive features:
 │   ├── 6502.js             # 6502 CPU instructions
 │   └── 65C02.js            # 65C02 CPU instructions
 ├── scripts/
-│   ├── generate-direct.js  # PNG/PDF generation script
-│   └── generate-html.js    # HTML static generation script
+│   ├── generate-direct.js         # PNG/PDF generation script
+│   ├── generate-html.js           # HTML static generation script
+│   ├── generate-hex-table.js      # 6502 hex table generation script
+│   ├── generate-65C02-hex-table.js # 65C02 hex table generation script
+│   └── common-html-generator.js   # Shared HTML generation utilities
 ├── static/
 │   └── C64_Pro-STYLE.ttf   # Font file
 ├── output/                 # Generated cheat sheets

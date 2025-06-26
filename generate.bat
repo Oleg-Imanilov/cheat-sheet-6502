@@ -10,14 +10,10 @@ if not exist "node_modules" (
     echo.
 )
 
-echo Generating cheat sheets (PDF and PNG)...
-node scripts/generate-direct.js
+echo Generating cheat sheets (HTML, PDF and PNG)...
+npm run generate-all
 
 echo.
 echo Done! Check the 'output' folder for your files:
-echo - cheat-sheet-6502.pdf
-echo - cheat-sheet-6502.png  
-echo - cheat-sheet-65C02.pdf
-echo - cheat-sheet-65C02.png
 echo.
 pause
