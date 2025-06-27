@@ -84,6 +84,14 @@ class CommonHTMLGenerator {
                 ${col3}
                 ${col4}
             </div>
+            <div style="text-align:center;color:gray;margin-top:24px;margin-bottom:24px;">
+              <div style="display: block; text-align:left;width:900px;margin:auto;font-size:10px;">
+                <ul class="footer-list" style="margin:8px 0 0 18px;padding:0;">
+                    Flags (Right Upper corner): <b>N</b>=Negative, <b>V</b>=Overflow, <b>B</b>=Break, <b>D</b>=Decimal, <b>I</b>=Interrupt Disable, <b>Z</b>=Zero, <b>C</b>=Carry. Green flags are affected by the instruction.<br/><br/>
+                    Timing: The green number next to each mode is the number of CPU cycles for that addressing mode. A "+" means an extra cycle may be used (e.g. on page crossing).<br/><br/>
+                </ul>
+              </div>
+            </div>
         `;
     }
 
@@ -163,6 +171,14 @@ class CommonHTMLGenerator {
                 ${modesTable}
                 ${categoryLists}
             </div>
+            <div style="text-align:center;color:gray;margin-top:24px;margin-bottom:24px;">
+              <div style="display: block; text-align:left;width:900px;margin:auto;font-size:10px;">
+                <ul class="footer-list" style="margin:8px 0 0 18px;padding:0;">
+                    Flags (Right Upper corner): <b>N</b>=Negative, <b>V</b>=Overflow, <b>B</b>=Break, <b>D</b>=Decimal, <b>I</b>=Interrupt Disable, <b>Z</b>=Zero, <b>C</b>=Carry. Green flags are affected by the instruction.<br/><br/>
+                    Timing: The green number next to each mode is the number of CPU cycles for that addressing mode. A "+" means an extra cycle may be used (e.g. on page crossing).<br/><br/>
+                </ul>
+              </div>
+            </div>
         `;
     }
 
@@ -201,6 +217,16 @@ class CommonHTMLGenerator {
             color: gray;
             margin-bottom: 20px;
             font-weight: bold;
+        }
+
+        .footer-list {
+            margin:8px 0 0 18px;
+            padding:0;
+            font-size:10px;
+        }
+
+        .footer-list b {
+            color:black;
         }
 
         /* Force consistent layout for static HTML to match PNG */
